@@ -1,0 +1,7 @@
+name: learning-ghactions
+on: push
+jobs:
+  printing-hello-world:
+    runs-on: ubuntu-latest
+      steps: 
+        - run: echo "hello world"
