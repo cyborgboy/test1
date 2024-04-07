@@ -2,7 +2,7 @@ name: CI SCAN
 on: push
 jobs:
   Semgrep SAST Scanning
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     container:
       image: returntocorp/semgrep
   
