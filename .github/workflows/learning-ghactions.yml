@@ -24,7 +24,7 @@ jobs:
           path: report.sarif
       
       - name: CODE QL
-        uses: 
+        uses:
           - github/codeql-actions/init@v3
           - github/codeql-actions/autobuild@v3
           - github/codeql-actions/analyze@v3
