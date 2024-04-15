@@ -23,8 +23,11 @@ jobs:
           name: report.sarif
           path: report.sarif
       
-      - name: CODE QL
-        uses:
-          - github/codeql-actions/init@v3
-          - github/codeql-actions/autobuild@v3
-          - github/codeql-actions/analyze@v3
+      - name: Intialize CODE QL
+        uses: github/codeql-actions/init@v3
+      - name: Autobuild
+        uses: github/codeql-actions/autobuild@v3
+        with:
+          language: ${{ matrix.language}}
+      - name: Analyze
+        uses: github/codeql-actions/analyze@v3
